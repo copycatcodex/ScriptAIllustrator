@@ -18,7 +18,7 @@ if (continueScript) {
   // Cek apakah ada objek yang dipilih
   if (selectedObjects.length > 0) {
     // Meminta pengguna untuk memasukkan warna
-    var userInput = prompt("Masukkan warna RGB (contoh: 255,0,0 untuk merah):", "255,0,0");
+    var userInput = prompt("Masukan Warna RGB [Black: 35,31,32 | Red: 237, 28, 36 | Yellow: 248, 236, 30 | Blue: 0, 174, 239 | White: 255, 255, 255]:", "255,0,0");
     
     // Memisahkan nilai RGB yang dimasukkan pengguna
     var rgbValues = userInput.split(",");
@@ -131,7 +131,8 @@ if (continueScript) {
       newGroup.name = "berhasil " + groupCount;
       groupCount++; // Menambah nomor urutan grup
       // Menghapus objek asli
-      selectedObject.remove();
+      selectedObject.hidden = true;
+      
     } else {
       alert("Objek ke-" + (j + 1) + " bukan objek path.");
     }
