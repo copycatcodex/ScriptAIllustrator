@@ -130,6 +130,8 @@ if (continueScript) {
       // Memberi nama pada grup dengan nomor urutan
       newGroup.name = "berhasil " + groupCount;
       groupCount++; // Menambah nomor urutan grup
+      // Menghapus objek asli
+      selectedObject.remove();
     } else {
       alert("Objek ke-" + (j + 1) + " bukan objek path.");
     }
